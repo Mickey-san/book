@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Webスクレイパー</title>
+</head>
+<body>
+    <h1>URLからタイトルを取得</h1>
+    <form method="post">
+        <input type="text" name="url" placeholder="https://example.com" size="50" required>
+        <button type="submit">取得</button>
+    </form>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+</body>
+</html>
