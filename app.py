@@ -8,5 +8,6 @@ def index():
     result = get_grouped_numbers()
     return render_template('index.html', result=result)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))  # デフォルトで10000（ローカル用）
+    app.run(host="0.0.0.0", port=port)
